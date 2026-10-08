@@ -32,7 +32,11 @@
   "description": "現場で語り継がれてきた知を活かす業務効率化システムの開発・導入支援を行う会社です。"
 }
 </script>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-96.png" sizes="96x96" type="image/png">
+<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
@@ -111,9 +115,7 @@
   /* members */
   .members{display:grid;grid-template-columns:1fr;gap:40px;max-width:680px}
   @media (max-width:760px){.members{grid-template-columns:1fr}}
-  .member{display:grid;grid-template-columns:64px 1fr;gap:20px}
-  .member .avatar{width:64px;height:64px;background:var(--konnezu-tint);display:flex;align-items:center;justify-content:center;border-radius:2px}
-  .member .avatar img{width:30px}
+  .member{border-left:2px solid var(--konnezu);padding-left:22px}
   .member .role{font-size:12.5px;letter-spacing:.12em;color:var(--konnezu);font-weight:500}
   .member h3{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:.1em;margin:4px 0 2px}
   .member .en{font-size:12px;color:var(--grey);letter-spacing:.08em;margin-bottom:12px}
@@ -215,7 +217,6 @@
       <div class="sec-head"><span class="en">MEMBERS</span><h2>メンバー</h2></div>
       <div class="members">
         <div class="member">
-          <div class="avatar"><img src="assets/mark.svg" alt=""></div>
           <div>
             <div class="role">代表取締役 CEO</div>
             <h3>飯尾 碧</h3>
