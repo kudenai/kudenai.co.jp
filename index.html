@@ -40,117 +40,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --konnezu-dark:#3A4A56; --konnezu:#55687A; --konnezu-light:#8C9DAB; --konnezu-tint:#E7ECF0;
-    --ink:#1A1A1A; --grey:#6B6B6B; --grey-light:#D9D9D9; --paper:#FFFFFF;
-    --serif:"Noto Serif JP","Source Han Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
-    --sans:"Noto Sans JP","Source Han Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
-    --max:1040px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.9;font-size:16px;-webkit-font-smoothing:antialiased;border-left:6px solid var(--konnezu)}
-  a{color:inherit;text-decoration:none}
-  img{display:block;max-width:100%}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-
-  /* header */
-  header{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--grey-light);z-index:10}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .nav .logo img{height:26px}
-  .nav ul{display:flex;gap:28px;list-style:none}
-  .nav li a{font-size:14px;letter-spacing:.06em;color:var(--konnezu-dark);padding:6px 0;border-bottom:1px solid transparent}
-  .nav li a:hover{border-bottom-color:var(--konnezu)}
-  .nav .cta{border:1px solid var(--konnezu);color:var(--konnezu);padding:8px 16px;border-radius:2px}
-  .nav .cta:hover{background:var(--konnezu);color:#fff;border-bottom-color:var(--konnezu)}
-  @media (max-width:720px){.nav ul li:not(.cta-li){display:none} br.pc{display:none}}
-
-  /* hero */
-  .hero{padding:96px 0 88px;position:relative;overflow:hidden}
-  .hero .mark{position:absolute;right:-40px;top:40px;width:360px;opacity:.5;pointer-events:none}
-  .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5vw,48px);letter-spacing:.08em;line-height:1.5;color:var(--ink)}
-  .hero p.lead{margin-top:22px;font-size:17px;color:var(--konnezu-dark);letter-spacing:.04em;max-width:560px}
-  .hero .line{width:72px;height:2px;background:var(--konnezu);margin:36px 0 0}
-  @media (max-width:720px){.hero{padding:64px 0 56px}.hero .mark{width:220px;right:-30px;top:20px}}
-
-  /* sections */
-  section{padding:88px 0}
-  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:40px}
-  .sec-head .en{font-family:var(--sans);font-size:12px;letter-spacing:.2em;color:var(--konnezu);font-weight:500}
-  .sec-head h2{font-family:var(--serif);font-weight:600;font-size:26px;letter-spacing:.08em;color:var(--ink)}
-  .sec-head::after{content:"";flex:1;height:1px;background:var(--grey-light)}
-  @media (max-width:720px){section{padding:64px 0}}
-
-  /* philosophy (dark) */
-  .dark{background:var(--konnezu);color:#fff;position:relative;overflow:hidden}
-  .dark .sec-head .en{color:var(--konnezu-tint)}
-  .dark .sec-head h2{color:#fff}
-  .dark .sec-head::after{background:rgba(255,255,255,.25)}
-  .dark .cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-  .dark .big{font-family:var(--serif);font-size:clamp(22px,3vw,30px);font-weight:600;letter-spacing:.06em;line-height:1.8;padding-left:22px;border-left:2px solid rgba(255,255,255,.6)}
-  .dark .body{font-size:15.5px;line-height:2.1;color:rgba(255,255,255,.92)}
-  @media (max-width:860px){.dark .cols{grid-template-columns:1fr;gap:28px}}
-  .dark .body p+p{margin-top:16px}
-
-  /* services */
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-  @media (max-width:860px){.grid3{grid-template-columns:1fr}}
-  .card{border-top:2px solid var(--konnezu);padding:26px 0 0}
-  .card .num{font-size:12px;letter-spacing:.2em;color:var(--konnezu);font-weight:500}
-  .card h3{font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:.06em;margin:10px 0 12px;color:var(--ink)}
-  .card p{font-size:14.5px;color:#333;line-height:1.95}
-  .flow{margin-top:56px}
-  .flow h4{font-size:13px;letter-spacing:.16em;color:var(--konnezu-dark);font-weight:700;margin-bottom:18px}
-  .flow ol{display:grid;grid-template-columns:repeat(4,1fr);gap:0;list-style:none;counter-reset:s}
-  .flow li{position:relative;background:var(--konnezu-tint);padding:22px 20px 22px 22px;font-size:14px;color:#333;margin-right:22px;border-radius:2px}
-  .flow li:last-child{margin-right:0}
-  .flow li::after{content:"";position:absolute;right:-22px;top:50%;width:22px;height:1px;background:var(--konnezu-light)}
-  .flow li:last-child::after{display:none}
-  .flow li b{display:block;font-family:var(--serif);font-size:16px;color:var(--konnezu-dark);letter-spacing:.06em;margin-bottom:6px}
-  .flow li b::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:#fff;background:var(--konnezu);display:block;width:max-content;padding:2px 8px;border-radius:2px;margin-bottom:10px;line-height:1.6}
-  @media (max-width:860px){.flow ol{grid-template-columns:1fr 1fr;row-gap:22px}.flow li:nth-child(2)::after{display:none}}
-  @media (max-width:520px){.flow ol{grid-template-columns:1fr;row-gap:14px}.flow li{margin-right:0}.flow li::after{display:none}}
-
-  /* members */
-  .members{display:grid;grid-template-columns:1fr;gap:40px;max-width:680px}
-  @media (max-width:760px){.members{grid-template-columns:1fr}}
-  .member{border-left:2px solid var(--konnezu);padding-left:22px}
-  .member .role{font-size:12.5px;letter-spacing:.12em;color:var(--konnezu);font-weight:500}
-  .member h3{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:.1em;margin:4px 0 2px}
-  .member .en{font-size:12px;color:var(--grey);letter-spacing:.08em;margin-bottom:12px}
-  .member p{font-size:14.5px;color:#333;line-height:1.95}
-
-  /* news */
-  .news-list{list-style:none;max-width:760px;border-top:1px solid var(--grey-light)}
-  .news-item{display:grid;grid-template-columns:120px 1fr;gap:6px 24px;padding:24px 8px;border-bottom:1px solid var(--grey-light)}
-  .news-item time{font-size:13px;letter-spacing:.1em;color:var(--konnezu);font-weight:500;line-height:1.9}
-  .news-item h3{font-family:var(--serif);font-size:18px;font-weight:600;letter-spacing:.06em;color:var(--ink);line-height:1.7}
-  .news-item p{font-size:14.5px;color:#333;line-height:1.95;margin-top:8px}
-  .news-meta{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin-top:14px;font-size:14px;color:#333}
-  .news-meta dt{color:var(--konnezu-dark);font-weight:500;letter-spacing:.06em}
-  .news-item h3{text-wrap:balance}
-  @media (max-width:520px){.news-item{grid-template-columns:1fr;gap:2px}.news-item h3{font-size:16.5px}}
-
-  /* company */
-  .company{background:var(--konnezu-tint)}
-  table{width:100%;border-collapse:collapse;font-size:15px;max-width:760px}
-  th,td{text-align:left;padding:16px 8px;border-bottom:1px solid rgba(85,104,122,.25);vertical-align:top}
-  th{width:160px;color:var(--konnezu-dark);font-weight:500;letter-spacing:.06em}
-  @media (max-width:520px){th{width:110px}}
-
-  /* contact */
-  .contact{text-align:center}
-  .contact p{color:#333;max-width:560px;margin:0 auto 28px}
-  .btn{display:inline-block;background:var(--konnezu);color:#fff;padding:16px 40px;border-radius:2px;letter-spacing:.1em;font-size:15px}
-  .btn:hover{background:var(--konnezu-dark)}
-  .contact .mail{display:block;margin-top:16px;font-size:14px;color:var(--grey);letter-spacing:.04em}
-
-  footer{background:var(--konnezu-dark);color:rgba(255,255,255,.85);padding:40px 0}
-  footer .in{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-  footer img{height:22px}
-  footer small{font-size:12px;letter-spacing:.06em}
-</style>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
@@ -161,7 +51,7 @@
       <li><a href="#philosophy">考え方</a></li>
       <li><a href="#services">事業内容</a></li>
       <li><a href="#members">メンバー</a></li>
-      <li><a href="#news">お知らせ</a></li>
+      <li class="sp-li"><a href="/news/">お知らせ</a></li>
       <li><a href="#company">会社概要</a></li>
       <li class="cta-li"><a class="cta" href="#contact">お問い合わせ</a></li>
     </ul>
@@ -238,26 +128,6 @@
         </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="news">
-    <div class="wrap">
-      <div class="sec-head"><span class="en">NEWS</span><h2>お知らせ</h2></div>
-      <ul class="news-list">
-        <li class="news-item">
-          <time datetime="2026-10-21">2026.10.21</time>
-          <div>
-            <h3>JAPAN FUTURE GATE に出展します</h3>
-            <p>幕張メッセで開催される「JAPAN FUTURE GATE」に出展します。メール・チャット・会議の記録から「誰が・何を・なぜ決めたか」を拾い上げ、案件ごとの判断記録として残す仕組みをご紹介します。会場にお越しの際は、ぜひブースへお立ち寄りください。</p>
-            <dl class="news-meta">
-              <dt>会期</dt><dd>2026年11月4日（水）〜6日（金）</dd>
-              <dt>会場</dt><dd>幕張メッセ</dd>
-              <!-- ブース番号が決まったら有効化: <dt>ブース</dt><dd>○○</dd> -->
-            </dl>
-          </div>
-        </li>
-      </ul>
     </div>
   </section>
 
