@@ -125,7 +125,9 @@ footer small{font-size:12px;letter-spacing:.06em}
 .article .meta{display:flex;align-items:center;gap:14px}
 .article .meta time{font-size:13px;letter-spacing:.1em;color:var(--konnezu);font-weight:500}
 .article h1{font-family:var(--serif);font-weight:600;font-size:clamp(24px,3.6vw,32px);letter-spacing:.06em;line-height:1.6;margin:12px 0 28px;text-wrap:balance}
-.article .eyecatch{width:100%;height:auto;border-radius:2px;margin-bottom:36px}
+.article .eyecatch-fig{margin:0 0 36px}
+.article .eyecatch{width:100%;height:auto;border-radius:2px}
+.article .eyecatch-fig figcaption{margin-top:8px;font-size:11.5px;color:var(--grey);letter-spacing:.04em;text-align:right}
 .article .lead{font-size:16.5px;color:var(--konnezu-dark);font-weight:500;line-height:2;padding-left:20px;border-left:2px solid var(--konnezu);margin-bottom:44px}
 .article h2{font-family:var(--serif);font-size:20px;font-weight:600;letter-spacing:.06em;margin:52px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--grey-light)}
 .article h3{font-size:14px;font-weight:700;letter-spacing:.1em;color:var(--konnezu-dark);margin-bottom:10px}
