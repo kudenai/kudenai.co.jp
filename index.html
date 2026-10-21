@@ -121,6 +121,17 @@
   .member .en{font-size:12px;color:var(--grey);letter-spacing:.08em;margin-bottom:12px}
   .member p{font-size:14.5px;color:#333;line-height:1.95}
 
+  /* news */
+  .news-list{list-style:none;max-width:760px;border-top:1px solid var(--grey-light)}
+  .news-item{display:grid;grid-template-columns:120px 1fr;gap:6px 24px;padding:24px 8px;border-bottom:1px solid var(--grey-light)}
+  .news-item time{font-size:13px;letter-spacing:.1em;color:var(--konnezu);font-weight:500;line-height:1.9}
+  .news-item h3{font-family:var(--serif);font-size:18px;font-weight:600;letter-spacing:.06em;color:var(--ink);line-height:1.7}
+  .news-item p{font-size:14.5px;color:#333;line-height:1.95;margin-top:8px}
+  .news-meta{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin-top:14px;font-size:14px;color:#333}
+  .news-meta dt{color:var(--konnezu-dark);font-weight:500;letter-spacing:.06em}
+  .news-item h3{text-wrap:balance}
+  @media (max-width:520px){.news-item{grid-template-columns:1fr;gap:2px}.news-item h3{font-size:16.5px}}
+
   /* company */
   .company{background:var(--konnezu-tint)}
   table{width:100%;border-collapse:collapse;font-size:15px;max-width:760px}
@@ -150,6 +161,7 @@
       <li><a href="#philosophy">考え方</a></li>
       <li><a href="#services">事業内容</a></li>
       <li><a href="#members">メンバー</a></li>
+      <li><a href="#news">お知らせ</a></li>
       <li><a href="#company">会社概要</a></li>
       <li class="cta-li"><a class="cta" href="#contact">お問い合わせ</a></li>
     </ul>
@@ -226,6 +238,26 @@
         </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="wrap">
+      <div class="sec-head"><span class="en">NEWS</span><h2>お知らせ</h2></div>
+      <ul class="news-list">
+        <li class="news-item">
+          <time datetime="2026-10-21">2026.10.21</time>
+          <div>
+            <h3>JAPAN FUTURE GATE に出展します</h3>
+            <p>幕張メッセで開催される「JAPAN FUTURE GATE」に出展します。メール・チャット・会議の記録から「誰が・何を・なぜ決めたか」を拾い上げ、案件ごとの判断記録として残す仕組みをご紹介します。会場にお越しの際は、ぜひブースへお立ち寄りください。</p>
+            <dl class="news-meta">
+              <dt>会期</dt><dd>2026年11月4日（水）〜6日（金）</dd>
+              <dt>会場</dt><dd>幕張メッセ</dd>
+              <!-- ブース番号が決まったら有効化: <dt>ブース</dt><dd>○○</dd> -->
+            </dl>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 
